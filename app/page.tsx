@@ -1,7 +1,12 @@
-import Header from "./components/Header";
+import CoursePage from "./components/Cousers";
 
 function HomePage() {
-  return <>Hi, I am the home</>;
+  return (
+    <>
+      {/* @ts-expect-error Async Server Component */}
+      <CoursePage />;
+    </>
+  );
 }
 
 export default HomePage;

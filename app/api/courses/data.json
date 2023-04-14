@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "title": "Course #1",
+    "description": "React Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "link": "https://www.google.com",
+    "level": "Beginner"
+  },
+  {
+    "id": "2",
+    "title": "Course #2",
+    "description": "React Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "link": "https://www.google.com",
+    "level": "Intermediate"
+  },
+  {
+    "id": "3",
+    "title": "Course #3",
+    "description": "Angular Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "link": "https://www.google.com",
+    "level": "All Levels"
+  },
+  {
+    "id": "4",
+    "title": "Course #4",
+    "description": "HTML Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "link": "https://www.google.com",
+    "level": "Beginner"
+  },
+  {
+    "id": "5",
+    "title": "Course #5",
+    "description": "CSS Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "link": "https://www.google.com",
+    "level": "Intermediate"
+  }
+]
