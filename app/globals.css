@@ -170,4 +170,11 @@ h3 {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .form-search {
+    flex-direction: column;
+  }
+  .form-search input[type="text"] {
+    padding: 10px;
+  }
 }
