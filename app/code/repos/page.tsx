@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AiFillStar, AiFillEye } from "react-icons/ai";
 
 interface Repo {
   id: string;
@@ -22,14 +23,22 @@ async function ReposPage() {
     <div>
       <h2>Repositories</h2>
       {repos.map((repo: Repo) => (
-        <div key={repo.id}>
-          <p>{repo.name}</p>
+        <div key={repo.id} className="card">
+          <h3>{repo.name}</h3>
           <p>{repo.description}</p>
-          <p>{repo.stargazers_count}</p>
-          <p>{repo.watchers_count}</p>
-          <Link href={`/code/repos/${repo.name}`}>Click here to see de repo</Link>
-          <br />
-          <br />
+          <div className="card__footer">
+            <p className="card__tip">
+              <AiFillStar size={24} />
+              {repo.stargazers_count}
+            </p>
+            <p className="card__tip">
+              <AiFillEye size={24} />
+              {repo.watchers_count}
+            </p>
+            <Link href={`/code/repos/${repo.name}`} className="ancor">
+              Click here to see de repo
+            </Link>
+          </div>
         </div>
       ))}
     </div>

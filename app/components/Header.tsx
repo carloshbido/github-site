@@ -1,13 +1,12 @@
-"use client";
-import { useState } from "react";
-
 import Link from "next/link";
 
 function Header() {
   return (
     <header>
-      <div>
-        <div>Logo</div>
+      <div className="header">
+        <h1>
+          GitHub<span>Study</span>
+        </h1>
         <nav>
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>

@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { AiFillFolderOpen } from "react-icons/ai";
+
 interface Content {
   path: string;
   name: string;
@@ -19,10 +21,13 @@ async function RepoDirs(props: { name: string }) {
   return (
     <>
       <h3>Directories</h3>
-      <ul>
+      <ul className="directories">
         {dirs.map((dir: Content) => (
           <li key={dir.path}>
-            <Link href={`/code/repos/${props.name}/${dir.path}`}>{dir.path}</Link>
+            <Link href={"*"}>
+              <AiFillFolderOpen size={20} />
+              {dir.path}
+            </Link>
           </li>
         ))}
       </ul>

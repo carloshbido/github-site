@@ -1,6 +1,14 @@
 import Link from "next/link";
 
-interface Course {
+import CourseSearch from "./CourseSearch";
+
+interface IProps {
+  onSearchTerm: (searchTerm: string) => void;
+  onFetchData: () => void;
+  courses: Array<ICourse>;
+}
+
+interface ICourse {
   id: string;
   title: string;
   description: string;
@@ -8,24 +16,26 @@ interface Course {
   level: string;
 }
 
-async function fetchData() {
-  const response = await fetch("http://localhost:3000/api/courses");
-  const courses = response.json();
-  return courses;
-}
-
-async function CoursePage() {
-  const courses = await fetchData();
+async function CoursePage(props: IProps) {
+  const { courses, onSearchTerm, onFetchData } = props;
 
   return (
     <div>
-      <h2>CoursePage</h2>
-      {courses.map((course: Course) => (
-        <div key={course.id}>
-          <p>{course.title}</p>
+      <h2>Course Page</h2>
+      <CourseSearch onSearchTerm={onSearchTerm} onFetchData={onFetchData} />
+      {courses.map((course: ICourse) => (
+        <div key={course.id} className="card">
+          <h3>{course.title}</h3>
           <p>{course.description}</p>
-          <p>{course.level}</p>
-          <Link href={course.link}>Go to Course</Link>
+          <div className="card__footer">
+            <p>
+              <strong>Level: </strong>
+              {course.level}
+            </p>
+            <Link href={course.link} className="ancor">
+              Go to Course
+            </Link>
+          </div>
         </div>
       ))}
     </div>
