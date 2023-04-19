@@ -3,8 +3,8 @@
 function LoadingPage() {
   return (
     <div>
-      <p>Carregando o arquivo...</p>
-      <small>Esse processo demorará alguns segundos</small>
+      <p>Loading...</p>
+      <small>Waiting a second</small>
     </div>
   );
 }

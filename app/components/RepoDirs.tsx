@@ -24,7 +24,7 @@ async function RepoDirs(props: { name: string }) {
       <ul className="directories">
         {dirs.map((dir: Content) => (
           <li key={dir.path}>
-            <Link href={"*"}>
+            <Link href={props.name}>
               <AiFillFolderOpen size={20} />
               {dir.path}
             </Link>

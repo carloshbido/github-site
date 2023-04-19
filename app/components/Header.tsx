@@ -5,7 +5,7 @@ function Header() {
     <header>
       <div className="header">
         <h1>
-          GitHub<span>Study</span>
+          <span>GitHub</span>Study
         </h1>
         <nav>
           <Link href="/">Home</Link>

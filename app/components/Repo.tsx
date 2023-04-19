@@ -17,15 +17,15 @@ async function Repo(props: { name: string }) {
       <div className="card__footer">
         <p className="card__tip">
           <AiFillStar size={24} />
-          Stars: {repo.stargazers_count}
+          {repo.stargazers_count}
         </p>
         <p className="card__tip">
           <AiOutlineFork size={24} />
-          Forks: {repo.forks_count}
+          {repo.forks_count}
         </p>
         <p className="card__tip">
           <AiFillEye size={24} />
-          AiFillEye: {repo.watchers_count}
+          {repo.watchers_count}
         </p>
       </div>
     </div>
